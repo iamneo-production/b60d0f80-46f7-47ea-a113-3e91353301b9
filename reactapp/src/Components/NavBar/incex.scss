@@ -1,0 +1,142 @@
+.navbar{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    height:80px;
+    width:100%;
+    z-index: 10;
+    box-shadow: 0px 1px 10px #dddddd;
+    .link{
+        color:black;
+        background-color: white;
+        text-decoration: none;
+        margin-left:15px;
+        margin-right:15px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+    
+        &:hover{
+            position: relative;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            background-size: 100% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            -ms-background-clip: text;
+            -ms-text-fill-color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(45deg, 
+                              #ff5100,#ff5100,#ff5100,#ff5100);
+            animation: 0.4s shake infinite alternate;
+          
+            @keyframes shake {
+                0% { transform: skewX(-30deg); }
+                5% { transform: skewX(30deg); }
+                10% { transform: skewX(-30deg); }
+                15% { transform: skewX(30deg); }
+                20% { transform: skewX(-30deg); }
+                25% { transform: skewX(30deg); }
+                30% { transform: skewX(0deg); }
+                100% { transform: skewX(0deg); }  
+            }
+        }
+    }
+
+    .link-logo{
+        color:black;
+        background-color: white;
+        text-decoration: none;
+        margin-left:50px;
+        margin-right:25px;
+        font-size: 20px;
+        
+
+        .nav-logo{
+            background-color: white;
+            color: black;
+            position:relative;
+            width:220px;
+            margin-left: 50px;
+
+            
+
+            .lightening-logo{
+                background-color: transparent;
+                height:45px;
+                position:absolute;
+                transform: rotateY(180deg);
+                z-index:2;
+            }
+            .box{
+                outline: 1px red;
+                margin-left:5px;
+                height:45px;
+                width: 25px;
+                position:absolute;
+                background: 
+                linear-gradient(to bottom, transparent 40%, #ffffff 50%, transparent 60%);
+                background-size:200% 200%;
+                background-repeat: no-repeat;
+                animation:placeholderShimmer 3s infinite linear;
+                @keyframes placeholderShimmer {
+                    0% {
+                    background-position:500% 500%; /*OR bottom right*/
+                    }
+
+                    100% {
+                    background-position:0 0; /*OR top left*/
+                    }
+                }
+                z-index:3;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: 700;  
+                background-color: white;
+                color: #303442;
+                text-align:right;
+            }
+        }
+    }
+    .link-button{
+        
+        color:black;
+        background-color: white;
+        text-decoration: none;
+        margin-left:15px;
+        margin-right:15px;
+        font-weight: 500;
+        font-size: 16px;  
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        .appointment-container{
+            background-color: #ff5100;
+            padding:10px;
+            padding-left:15px;
+            padding-right:25px;
+            border-radius: 5px;
+            border: 1px solid #ff5100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            &:hover{
+                color: #ff5100;
+                background-color: white;
+            }
+            .link-icon{
+                font-size: 18px;
+            }
+        } 
+    }
+}
